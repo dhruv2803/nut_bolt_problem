@@ -3,17 +3,17 @@ using namespace std;
 int main()
 {
     int n;
-    cout << "Please enter the number of pairs of botls and pairs : ";
+    cout << "Please enter the number of pairs of nuts and bolts : ";
     cin >> n;
     vector<char> nuts, bolts;
-    cout << "PLEASE ENTER SIZES OF ALL N NUTS : "
+    cout << "PLEASE ENTER SIZES OF ALL N NUTS : ";
     for (int i = 0; i < n; i++)
     {
         char temp;
         cin >> temp;
         nuts.push_back(temp);
     }
-    cout << "PLEASE ENTER SIZES OF ALL N BOLTS : "
+    cout << "PLEASE ENTER SIZES OF ALL N BOLTS : ";
     for (int i = 0; i < n; i++)
     {
         char temp;
@@ -32,10 +32,10 @@ int main()
         
     }
     cout << "NUTS  : " ;
-    for(auto x:a)
+    for(auto x:nuts)
         cout << x << ' ';
     cout << endl << "BOLTS : ";
-    for(auto x:b)
+    for(auto x:bolts)
         cout << x << ' ';
     cout << endl;
     return 0;
