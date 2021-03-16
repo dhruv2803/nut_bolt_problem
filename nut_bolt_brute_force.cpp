@@ -3,37 +3,41 @@ using namespace std;
 int main()
 {
     int n;
+    cout << "Please enter the number of pairs of botls and pairs : ";
     cin >> n;
-    vector<char> a,b;
+    vector<char> nuts, bolts;
+    cout << "PLEASE ENTER SIZES OF ALL N NUTS : "
     for (int i = 0; i < n; i++)
     {
         char temp;
         cin >> temp;
-        a.push_back(temp);
+        nuts.push_back(temp);
     }
+    cout << "PLEASE ENTER SIZES OF ALL N BOLTS : "
     for (int i = 0; i < n; i++)
     {
         char temp;
         cin >> temp;
-        b.push_back(temp);
+        bolts.push_back(temp);
     }
     for (int i = 0; i < n; i++)
     {
         for (int j = i; j < n; j++)
         {
-            if (a[i]==b[j])
+            if (nuts[i]==bolts[j])
             {
-                swap(b[i],b[j]);
-            }
-            
+                swap(bolts[i],bolts[j]);
+            } 
         }
         
     }
+    cout << "NUTS  : " ;
     for(auto x:a)
-    cout << x << ' ';
-    cout << endl;
+        cout << x << ' ';
+    cout << endl << "BOLTS : ";
     for(auto x:b)
-    cout << x << ' ';
+        cout << x << ' ';
+    cout << endl;
     return 0;
     
 }
